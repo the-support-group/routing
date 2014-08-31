@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit colors="true" bootstrap="../vendor/autoload.php">
+    <testsuites>
+        <testsuite name="Routing Suite">
+            <file>./ResolvedRequestTest.php</file>
+            <file>./RouteTest.php</file>
+            <file>./RouterTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
