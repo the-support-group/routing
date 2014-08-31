@@ -1,4 +1,6 @@
 # Routing
+[![Build Status](https://scrutinizer-ci.com/g/air-php/routing/badges/build.png?b=master)](https://scrutinizer-ci.com/g/air-php/routing/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/air-php/routing/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/air-php/routing/?branch=master)
+
 The routing library includes classes for handling web application routing.
 
 ## Installation
