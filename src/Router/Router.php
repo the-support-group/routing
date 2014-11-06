@@ -15,11 +15,19 @@ abstract class Router implements RouterInterface
 
 
     /**
-     * @param array $routes An array of routes.
+     * @var string $cachePath A file path to cache routes in.
      */
-    public function __construct(array $routes)
+    protected $cachePath;
+
+
+    /**
+     * @param array $routes An array of routes.
+     * @param string $cachePath A file path to cache routes in.
+     */
+    public function __construct(array $routes, $cachePath = null)
     {
         $this->routes = $routes;
+        $this->cachePath = $cachePath;
     }
 
 
