@@ -6,7 +6,7 @@
     "require": {
         "php": ">=5.5.0",
         "phpunit/phpunit": "4.1.*",
-        "air-php/http": "dev-master"
+        "air-php/http": "~0.1"
     },
     "autoload": {
         "psr-4": {
