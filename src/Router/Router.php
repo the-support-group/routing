@@ -66,5 +66,5 @@ abstract class Router implements RouterInterface
      * @param RequestInterface $request A request.
      * @return ResolvedRequestInterface A resolved request.
      */
-    abstract function route(RequestInterface $request);
+    abstract public function route(RequestInterface $request);
 }
