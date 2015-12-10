@@ -1,6 +1,5 @@
 {
     "name": "air-php/routing",
-    "version": "0.1",
     "type": "library",
     "description": "A routing library.",
     "require": {
