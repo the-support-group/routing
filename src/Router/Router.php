@@ -36,7 +36,7 @@ abstract class Router implements RouterInterface
      */
     public function addRoute(RouteInterface $route)
     {
-        $this->routes[] = $route;
+        $this->routes[$route->getName()] = $route;
     }
 
 
@@ -57,6 +57,21 @@ abstract class Router implements RouterInterface
     public function getRoutes()
     {
         return $this->routes;
+    }
+
+
+    /**
+     * @param string $routeName The route name.
+     *
+     * @return string
+     */
+    public function getPath($routeName)
+    {
+        if (! isset($this->routes[$routeName])) {
+            throw new RouteNotFoundException();
+        }
+
+        return $this->routes[$routeName]->getUri();
     }
 
 

@@ -5,6 +5,12 @@ namespace Air\Routing\Route;
 class Route implements RouteInterface
 {
     /**
+     * @var string $name The name of the route.
+     */
+    protected $name;
+
+
+    /**
      * @var string $uri The URI.
      */
     protected $uri;
@@ -29,17 +35,30 @@ class Route implements RouteInterface
 
 
     /**
+     * @param string $name The name of the route.
      * @param string $uri The URI.
      * @param string $controller The controller name.
      * @param string $action The controller action name.
      * @param string $requestType The request type.
      */
-    public function __construct($uri, $controller, $action, $requestType = 'GET')
+    public function __construct($uri, $controller, $action, $requestType = 'GET', $name = null)
     {
+        $this->name = $name;
         $this->uri = $uri;
         $this->controller = $controller;
         $this->action = $action;
         $this->requestType = $requestType;
+    }
+
+
+    /**
+     * Get the name.
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
 
