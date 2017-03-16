@@ -33,6 +33,14 @@ interface RouterInterface
 
 
     /**
+     * @param string $routeName The route name.
+     *
+     * @return string
+     */
+    public function getPath($routeName)
+
+
+    /**
      * Route a request.
      *
      * @param RequestInterface $request A request.

@@ -5,6 +5,12 @@ namespace Air\Routing\Route;
 interface RouteInterface
 {
     /**
+     * @return string The name of the route.
+     */
+    public function getName();
+
+
+    /**
      * @return string The URI.
      */
     public function getUri();
