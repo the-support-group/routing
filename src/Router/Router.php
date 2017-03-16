@@ -5,6 +5,7 @@ namespace Air\Routing\Router;
 use Air\Routing\Route\RouteInterface;
 use Air\Routing\ResolvedRequest\ResolvedRequestInterface;
 use Air\HTTP\Request\RequestInterface;
+use Exception;
 
 abstract class Router implements RouterInterface
 {
@@ -68,7 +69,7 @@ abstract class Router implements RouterInterface
     public function getPath($routeName)
     {
         if (! isset($this->routes[$routeName])) {
-            throw new RouteNotFoundException();
+            throw new Exception("Route '$routeName' not found, please check if correct route name was used.");
         }
 
         return $this->routes[$routeName]->getUri();
